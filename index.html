@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Countdown Timer</title>
+    <title>광구퇴사까지</title>
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>광구 퇴사까지 </h1>
-    <h1 id="timer"></h1>
+    <div style="text-align: center;">
+        <span id="timer" style="color:white; font-size: 100px;">clock</span>
+    </div>
+
     <img src="back.jpeg">
 
     <script> const countDownTimer = function (id, date) {
@@ -32,7 +35,7 @@
             document.getElementById(id).textContent = days + '일 ';
             document.getElementById(id).textContent += hours + '시간 ';
             document.getElementById(id).textContent += minutes + '분 ';
-            document.getElementById(id).textContent += seconds + '초';
+            document.getElementById(id).textContent += seconds + '초 ';
         } timer = setInterval(showRemaining, 1000);
     }
     var dateObj = new Date(); dateObj.setDate(dateObj.getDate() + 1);
